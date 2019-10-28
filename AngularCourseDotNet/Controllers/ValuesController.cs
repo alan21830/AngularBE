@@ -42,8 +42,12 @@ namespace AngularCourseDotNet.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Value value)
         {
+
+            _db.Values.Add(value);
+            _db.SaveChanges();
+
         }
 
         // PUT api/values/5

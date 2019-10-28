@@ -17,6 +17,9 @@ namespace AngularCourseDotNet.Controllers.Models
         public string password { get; set; }
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
+        public string  gender { get; set; }
+
+        public  ICollection<Photo> Photos{ get; set; }
 
 
     }

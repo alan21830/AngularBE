@@ -10,6 +10,9 @@ namespace AngularCourseDotNet.Controllers.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Telefono { get; set; }
+
+      public   byte[] Photo { get; set; }
 
 
     }

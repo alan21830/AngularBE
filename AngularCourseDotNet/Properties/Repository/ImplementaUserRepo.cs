@@ -71,11 +71,7 @@ namespace AngularCourseDotNet.Properties.Repository
             user.PasswordSalt = passwordSalt;
            await _db.User.AddAsync(user);
             await _db.SaveChangesAsync();
-
-
-
-
-                return user;
+              return user;
         }
 
         private void CreaPasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)

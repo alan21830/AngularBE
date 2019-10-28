@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AngularCourseDotNet.Controllers.Models;
+using AngularCourseDotNet.Properties.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,9 @@ namespace AngularCourseDotNet
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+           
+            services.AddScoped<UserDtoRepository, ImplDtoRepo>();
             services.AddDbContext<Context>(option => option.UseSqlite(Configuration.GetConnectionString("myconn")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddCors();
